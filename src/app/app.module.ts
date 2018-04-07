@@ -13,9 +13,13 @@ import { HeaderComponent } from './header/header.component';
 
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from './forms/forms.module';
+import { UsersModule } from './users/users.module';
 import { AnswersModule } from './answers/answers.module';
 import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
+
+import { HttpModule } from '@angular/http';
+import { Angular2TokenService } from 'angular2-token';
 
 @NgModule({
   declarations: [
@@ -30,11 +34,12 @@ import { routing } from './app.routing';
     ColorPickerModule,
     ChartsModule,
     FormsModule,
+    UsersModule,
     AnswersModule,
     RouterModule,
     routing
   ],
-  providers: [],
+  providers: [Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
